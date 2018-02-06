@@ -13,3 +13,9 @@ CREATE TABLE timelog(
     minutes INTEGER NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT now()
 );
+
+CREATE TABLE anxiety(
+    id INTEGER NOT NULL REFERENCES users(id),
+    value INTEGER NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT now()
+);
